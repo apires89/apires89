@@ -1,0 +1,11 @@
+<div id="ingredients">
+  <hr>
+  <strong>Ingredients:</strong>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li id="dose_<%= dose.id %>">
+        <%= dose.description %> <%= dose.ingredient.name %> <%= link_to ("<i class='fa fa-trash'></i>").html_safe, cocktail_dose_path(@cocktail, dose), method: :delete, remote: true %>
+      </li>
+    <% end %>
+  </ul>
+</div>

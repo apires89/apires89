@@ -1,0 +1,13 @@
+<h1>Create a New Cocktail</h1>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :about %>
+  <%= f.input :instructions %>
+  <%= f.input :photo_url %>
+
+
+
+  <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<%= simple_form_for(@cocktail, @dose) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :description %>
+  <%= f.association :ingredient, collection: Ingredient.all %>
+  <%= f.hidden_field :cocktail_id, value: @cocktail.id %>
+
+  <%f.button :submit %>
+<% end %>

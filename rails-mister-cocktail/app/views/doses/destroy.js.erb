@@ -1,0 +1,5 @@
+<% if !@cocktail.doses.any? %>
+  $("#ingredients").fadeOut();
+<% else %>
+  $("#dose_<%= @dose.id%>").fadeOut();
+<% end %>

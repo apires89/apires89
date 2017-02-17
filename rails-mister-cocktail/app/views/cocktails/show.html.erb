@@ -1,0 +1,21 @@
+<div class="left-container">
+  <h1><%= @cocktail.name.upcase %></h1>
+  <h3>ABOUT THE <%= @cocktail.name.upcase %> COCKTAIL</h3>
+  <p><%= @cocktail.about %></p>
+  <h3>HOW TO MAKE THE <%= @cocktail.name.upcase %> COCKTAIL</h3>
+  <%= @cocktail.instructions %>
+  <h3>ADD <%= @cocktail.name.upcase %>'S INGREDIENTS</h3>
+  <%= render 'doses/new' %>
+</div>
+<div class="right-container">
+  <%= image_tag @cocktail.photo_url, class: "img-responsive" %>
+  <% if @cocktail.doses.any? %>
+    <%= render 'ingredients' %>
+  <% end %>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+<div class="col-xs-6 col-sm-4">
+  <div class="cocktail-card">
+    <%= link_to cocktail_path(cocktail) do %>
+      <div>
+        <%= image_tag cocktail.photo_url, class: "img-responsive" %>
+      </div>
+      <div>
+        <%= cocktail.name.upcase %>
+      </div>
+    <% end %>
+  </div>
+</div>
