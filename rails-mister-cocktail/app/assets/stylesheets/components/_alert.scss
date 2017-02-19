@@ -6,10 +6,10 @@
   margin: 0;
   text-align: center;
   color: white;
-}
-.alert-info {
-  background: $green;
-}
-.alert-warning {
-  background: $red;
+  &-info {
+    background: $green;
+  }
+  &-warning {
+    background: $red;
+  }
 }
